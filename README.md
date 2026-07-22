@@ -75,5 +75,9 @@ Se creează o nouă matrice OpenCV și pentru fiecare pixel din matricea ArgMax 
 Resursele hardware disponibile sunt limitate. Astfel, pentru antrenare am ales o strategie controlată. Imaginile au fost redimensionate la W = 256 și H = 512 pixeli, iar numărul de batch-uri pe epocă a fost redus la 200 pentru a asigura un timp de antrenare de câteva minute. Funcția de cost scade rezonabil în primele epoci, demonstrând astfel că rețeaua DeepLab își adaptează corect ponderile pentru imaginile din setul de date CityScapes. Pentru rezultate ideale, numărul de epoci ar trebui extins la 20 și eliminată limita de batch-uri.  
 Modelul începe să segmenteze corect clasele mari și evidente atunci când loss-ul are o valoare mai mică de 1.0. Atunci când modelul a avut un loss de 0.7 după 10 epoci, rezultatul a fost bun, însă nu a atins nivelul de segmentare semantică așteptat și dorit.  
 Ulterior, a fost modificat numărul de epoci de la 10 la 20, iar dimensiunea batch-ului a fost crescută de la 200 la 500. În urma noului experiment, până la epoca 5, loss-ul a scăzut semnificativ atingând o valoare bună de 0.54. În intervalul 0.4-0.6 modelul dă rezultate mai bune, aproape ideale.
+
+
 Maparea culorilor
+
+
 <img width="589" height="488" alt="image" src="https://github.com/user-attachments/assets/fbf77dca-bf60-4156-877d-8bd7c18ece59" />
